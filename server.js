@@ -19,10 +19,11 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
 
-    app.use(cors({
-        origin: 'http://127.0.0.1:5500',
-        credentials: true
-    }));
+    app.use(cors());
+    // {
+    //     origin: 'http://127.0.0.1:5500',
+    //     credentials: true
+    // }
     
     app.use(bodyParser.json());
     app.use(cookieParser());
