@@ -4,7 +4,7 @@
   "description": "IEEE attendance api",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "Ghulam Mustafa",
   "license": "ISC",
