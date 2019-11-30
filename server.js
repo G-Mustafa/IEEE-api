@@ -29,7 +29,9 @@ db.once('open', function() {
     app.use(cookieParser());
 
     //seedDB();
-
+    app.get('/',(req,res) => {
+        res.send('success');
+    })
     app.post('/signin',controllers.signin);
     app.get('/attendance',middlewares.authenticateToken,controllers.getAttendanceData);
     app.post('/attendance',middlewares.authenticateToken,controllers.markAttendance);
